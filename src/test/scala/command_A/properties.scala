@@ -15,10 +15,10 @@ object properties {
   val kafkaRestUrl = getProperty("kafkaRestUrl")
   //  val influxHost = getProperty("influxHost")
 
-  val username = "test-user"
-  val password = "b6dikUaxdBbZ"
-  val client_id = "test-client"
-  val client_secret = "b6dikUaxdBbZ"
+  val username = "xxxxxxx"
+  val password = "xxxxxxx"
+  val client_id = "xxxxxx"
+  val client_secret = "xxxxxxx"
   val influxHost = "192.168.101.67"
 
   val baseUrl = "https://xxxxx-1.dev.dp.xxxxx.com"
