@@ -1,6 +1,5 @@
 package command_A
 
-//import LoadTest.kafka_01_Write_data._
 import io.gatling.core.Predef.atOnceUsers
 import io.gatling.http.protocol.HttpProtocolBuilder
 
@@ -11,14 +10,12 @@ import io.gatling.core.Predef._
 import io.gatling.core.scenario.Simulation
 import io.gatling.http.Predef._
 
-//import ru.tinkoff.gatling.kafka.Predef._
 class controlRules_maxPerformance extends Simulation {
   // точка входа
   //https://xxxxx-1.dev.dp.xxxxx.com/
 
 
   val httpProtocol: HttpProtocolBuilder = http
-    //    .baseUrl(baseUrl)
     .baseUrl("https://xxxxx-1.dev.dp.xxxxx.com")
     .inferHtmlResources()
 val start=50
@@ -63,9 +60,6 @@ val start=50
   ).maxDuration(10000)
     .assertions(global.responseTime.max.lt(3000))
   //        constantConcurrentUsers(1).during(300 second)).protocols(httpProtocol),
-
-
   //      WriteTimeMonitoring.writeTimeMonitoringScn.inject((atOnceUsers(1))).protocols(httpProtocol)
-
 }
 

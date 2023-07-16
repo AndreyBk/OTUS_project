@@ -29,14 +29,12 @@ val start=50
   setUp(
     Scenario_smoke_cr().inject(atOnceUsers(1)).protocols(httpProtocol)
       .andThen(
-
               // нагрузочный сценарий правил контроля
             Scenario_load_cr().inject(
             rampConcurrentUsers(0).to(800).during(60 seconds),
             constantConcurrentUsers(800) during (2 minutes),
             constantConcurrentUsers(1) during (60 seconds)
           ).protocols(httpProtocol),
-
         //
 //        Scenario_write_metrics().inject(
 //          rampConcurrentUsers(0).to(1).during(0 seconds),
@@ -52,9 +50,6 @@ val start=50
   ).maxDuration(10000)
     .assertions(global.responseTime.max.lt(3000))
   //        constantConcurrentUsers(1).during(300 second)).protocols(httpProtocol),
-
-
   //      WriteTimeMonitoring.writeTimeMonitoringScn.inject((atOnceUsers(1))).protocols(httpProtocol)
-
 }
 

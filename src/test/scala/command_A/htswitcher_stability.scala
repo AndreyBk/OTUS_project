@@ -45,17 +45,10 @@ class htswitcher_stability extends Simulation {
           rampConcurrentUsers(0).to(1).during(0 seconds),
           constantConcurrentUsers(1) during (2 hour)
         ).protocols(httpProtocol)
-
       ),
-
   ).maxDuration(10000)
     .assertions(global.responseTime.max.lt(10000))
-
-
   //        constantConcurrentUsers(1).during(300 second)).protocols(httpProtocol),
-
-
   //      WriteTimeMonitoring.writeTimeMonitoringScn.inject((atOnceUsers(1))).protocols(httpProtocol)
-
 }
 

@@ -72,12 +72,7 @@ class htswitcher_maxPerformance extends Simulation {
 
   ).maxDuration(10000)
     .assertions(global.responseTime.max.lt(3000))
-
-
   //        constantConcurrentUsers(1).during(300 second)).protocols(httpProtocol),
-
-
   //      WriteTimeMonitoring.writeTimeMonitoringScn.inject((atOnceUsers(1))).protocols(httpProtocol)
-
 }
 

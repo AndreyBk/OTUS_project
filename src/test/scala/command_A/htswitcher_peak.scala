@@ -47,15 +47,9 @@ class htswitcher_peak extends Simulation {
         ).protocols(httpProtocol)
 
       ),
-
   ).maxDuration(10000)
     .assertions(global.responseTime.max.lt(10000))
-
-
   //        constantConcurrentUsers(1).during(300 second)).protocols(httpProtocol),
-
-
   //      WriteTimeMonitoring.writeTimeMonitoringScn.inject((atOnceUsers(1))).protocols(httpProtocol)
-
 }
 
